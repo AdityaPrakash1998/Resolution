@@ -1,0 +1,8 @@
+extends layout
+block content 
+  h1 #{resolution.title}
+  h3 Description: #{resolution.body}
+  br
+  a.btn.btn-default(href='/edit/'+resolution._id) Edit
+  br
+  a.btn.btn-danger.delete_resolution(href="#" data-id=resolution._id) Delete

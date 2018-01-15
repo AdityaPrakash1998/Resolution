@@ -1,0 +1,12 @@
+extends layout
+block content
+  if isLogged==true
+    h1 #{title}
+    ul.list-group
+      each resolution, i in resolutions
+        li.list-group-item
+          a(href="/resolution/"+resolution._id)= resolution.title
+        br
+    a.btn.btn-danger.Logout(href="#") LogOut
+  else
+    h1 Please Log In to View Resolutions

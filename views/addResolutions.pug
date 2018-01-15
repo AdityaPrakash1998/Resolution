@@ -1,0 +1,12 @@
+extends layout
+block content
+  h1 #{title}
+  br
+  form(method="POST",action="/addResolutions")
+    .form-group
+      label Title:
+      input.form-control(type="text",name="title")
+    .form-group
+      label Body:
+      textarea.form-control(type="text",name="body",placeholder="Description of your resolution")
+    input.btn.btn-primary(type="submit",value="Submit")

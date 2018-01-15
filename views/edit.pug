@@ -1,0 +1,14 @@
+extends layout
+block content
+  h1 Edit your Resolution
+  br
+  form(method="POST",action="/edit/"+ resolution._id)
+    .form-group
+      label Title:
+      input.form-control(type="text",name="title" value= resolution.title)
+    .form-group
+      label Body:
+      textarea.form-control(type="text",name="body") #{resolution.body}
+    br
+    input.btn.btn-primary(type="submit",value="Submit")
+    
